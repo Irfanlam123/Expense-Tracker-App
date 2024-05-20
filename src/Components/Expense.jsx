@@ -102,7 +102,7 @@ const Expense = () => {
         {/* Display submitted data */}
         {submittedData.map((item, index) => (
           <div
-            className="bg-gray-300 text-black rounded-md mt-2 space-y-2"
+            className=" text-black rounded-md mt-2 text-xs space-y-2"
             key={index}
           >
             <p className="px-5">{`${item.name}:   $${item.price}`}</p>
