@@ -48,47 +48,55 @@ const Expense = () => {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center ml-32 mr-32 py-20 rounded-md bg-yellow-200 text-black">
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
-        <label className="font-bold">Item name:</label>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          placeholder="productName"
-        />
-        <label className="font-bold">Item Price:</label>
-        <input
-          type="text"
-          value={inputValue1}
-          onChange={handleInputChange1}
-          placeholder="Price?"
-        />
-        <div className="flex justify-center space-x-16 mt-2">
-          <button
-            type="submit"
-            className="font-bold bg-blue-200 rounded-full px-3 py-1"
-          >
-            AddItem
-          </button>
-          <button
-            type="button"
-            onClick={handleClear}
-            className="font-bold bg-blue-200 rounded-full px-3 py-1"
-          >
-            ClearAll
-          </button>
-        </div>
-      </form>
-      <div className="mt-5 font-bold text-2xl ">
-        <h2 className="flex justify-center bg-gray-950 px-5 rounded-md text-white">
+    <div className=" flex justify-center space-x-20 ml-16 mr-16 py-32 rounded-md bg-green-100 text-black">
+      <div className=" border-2 border-gray-800 rounded-md p-3">
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
+          <label className="font-bold flex justify-center text-xs">
+            Item name:
+          </label>
+          <input
+            className="text-gray-700 bg-red-100 rounded-md border-2 border-gray-800"
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="productName"
+          />
+          <label className="font-bold flex justify-center text-xs">
+            Item Price:
+          </label>
+          <input
+            className="text-gray-700 bg-red-100 rounded-md border-2 border-gray-800"
+            type="text"
+            value={inputValue1}
+            onChange={handleInputChange1}
+            placeholder="Price?"
+          />
+          <div className="flex justify-center space-x-16 mt-2">
+            <button
+              type="submit"
+              className="font-bold bg-blue-200 hover:bg-green-300 text-xs rounded-full px-3 py-1"
+            >
+              AddItem
+            </button>
+            <button
+              type="button"
+              onClick={handleClear}
+              className="font-bold bg-blue-200 hover:bg-green-300 text-xs rounded-full px-3 py-1"
+            >
+              ClearAll
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className="font-bold  border-2 border-gray-800 p-2 rounded-md px-28">
+        <h4 className="flex justify-center  bg-gray-950 px-5 rounded-full py-1 text-white">
           Total
-        </h2>
+        </h4>
         {/* Display total price */}
-        <div className="bg-gray-300 text-black rounded-md mt-2 space-y-2">
+        <div className="bg-green-100 text-black rounded-md mt-2 text-xs space-y-2">
           <p className="px-5">{`Total: $${total.toFixed(2)}`}</p>
         </div>
-        <h2 className="flex justify-center bg-gray-950 px-5 rounded-md text-white mt-5">
+        <h2 className="flex justify-center bg-gray-950 px-3 py-1 rounded-full text-xs text-white mt-5">
           Items
         </h2>{" "}
         {/* Display submitted data */}

@@ -3,11 +3,13 @@ import Expense from "./Components/Expense";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="flex justify-center text-2xl font-bold">
-        Expense Tracker
-      </h1>
-      <Expense/>
+    <div className="">
+      <div className="bg-blue-300 p-3 rounded-md ml-10 mr-10 mt-3 mb-3 hover:bg-blue-100 shadow-lg transition duration-300">
+        <h1 className="flex justify-center text-gray-700 text-2xl font-bold ">
+          Expense Tracker
+        </h1>
+      </div>
+      <Expense />
     </div>
   );
 };
